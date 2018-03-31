@@ -1,0 +1,27 @@
+{
+  "name": "lahacks2018",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "express": "^4.16.3"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gits-lit/lahacks2018.git"
+  },
+  "author": "gits lit",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/gits-lit/lahacks2018/issues"
+  },
+  "homepage": "https://github.com/gits-lit/lahacks2018#readme"
+}
