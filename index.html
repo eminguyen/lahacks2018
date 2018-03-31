@@ -38,37 +38,13 @@
       </div>
       <br/>
 
-      <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter hdpe">
-        <img src="./test/test.jpg" class="img-responsive">
+      {{#each data}}
+      <div class="col-md-4">
+        <img src={{this.imageSrc}}>
+        <h3>{{this.game}}</h1>
+          <p><span>Viewers:</span> {{this.viewers}}</p>
       </div>
-
-      <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter spray">
-        <img src="http://fakeimg.pl/365x365/" class="img-responsive">
-      </div>
-
-      <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter sprinkle">
-        <img src="http://fakeimg.pl/365x365/" class="img-responsive">
-      </div>
-
-      <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter sprinkle">
-        <img src="http://fakeimg.pl/365x365/" class="img-responsive">
-      </div>
-
-      <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter sprinkle">
-        <img src="http://fakeimg.pl/365x365/" class="img-responsive">
-      </div>
-
-      <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter sprinkle">
-        <img src="http://fakeimg.pl/365x365/" class="img-responsive">
-      </div>
-
-      <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter sprinkle">
-        <img src="http://fakeimg.pl/365x365/" class="img-responsive">
-      </div>
-
-      <div class="gallery_product col-lg-4 col-md-4 col-sm-4 col-xs-6 filter sprinkle">
-        <img src="http://fakeimg.pl/365x365/" class="img-responsive">
-      </div>
+      {{/each}}
 
     </div>
   </div>
