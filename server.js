@@ -21,6 +21,7 @@ app.get('/meme', function(req, res) {
 //socket io configuration
 var server = require('http').createServer(app);
 var io = require('socket.io').listen(server);
+var users = [];
 
 server.listen(3000, function() {
     console.log('hello server');
@@ -29,6 +30,7 @@ server.listen(3000, function() {
 io.on('connection', function(socket) {
     socket.join('meme game', function() {
         var rooms = Object.keys(socket.rooms);
-        console.log(rooms);
+        users.push(rooms);
+        console.log(users);
     })
 })
