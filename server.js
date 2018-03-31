@@ -6,6 +6,13 @@ var app = express();
 //detect working directory
 var path = require("path");
 
+//add meme scraping
+var scrape = require("./scrape.js");
+var printScrapeList = setInterval(getScrapeList, 3000);
+function getScrapeList() {
+  console.log(scrape.list);
+  clearInterval(printScrapeList);
+}
 //finds public
 app.use(express.static(path.join(__dirname, "public")));
 

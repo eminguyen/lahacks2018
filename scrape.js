@@ -17,6 +17,5 @@ fetch(url)
         list.push(link);
       }
     }
-    console.log(list);
-    module.exports = list;
+    exports.list = list;
    })
