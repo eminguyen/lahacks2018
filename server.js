@@ -2,14 +2,12 @@
 var express = require("express");
 //constructs the server
 var app = express();
+
 //detect working directory
 var path = require("path");
 
 //finds public
 app.use(express.static(path.join(__dirname, "public")));
-
-//runs server on port 3001 
-app.listen(3001, function(){console.log("hello server")});
 
 //landing page?? like an airplane --> serves up html
 app.get('/', function(req, res) {
@@ -18,4 +16,12 @@ app.get('/', function(req, res) {
 
 app.get('/meme', function(req, res) {
     res.send("meme");
+})
+
+//socket io configuration
+var server = require('http').createServer(app);
+var io = require('socket.io').listen(server);
+
+server.listen(3000, function() {
+    console.log('hello server');
 })
