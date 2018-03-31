@@ -25,3 +25,10 @@ var io = require('socket.io').listen(server);
 server.listen(3000, function() {
     console.log('hello server');
 })
+
+io.on('connection', function(socket) {
+    socket.join('meme game', function() {
+        var rooms = Object.keys(socket.rooms);
+        console.log(rooms);
+    })
+})
