@@ -25,10 +25,10 @@ app.use(express.static(path.join(__dirname, "public")));
 app.get('/', function(req, res) {
     var data = [
       {
-        "meme": "http://i0.kym-cdn.com/photos/images/facebook/001/217/729/f9a.jpg"
+        "meme": "http://energyandgold.com/wp-content/uploads/2018/01/Crypto-Market-Crash-365x365.jpg"
       },
       {
-        "meme": "http://i0.kym-cdn.com/photos/images/facebook/001/217/729/f9a.jpg"
+        "meme": "http://energyandgold.com/wp-content/uploads/2018/01/Crypto-Market-Crash-365x365.jpg"
       }
     ]
     var hbsObject = {
