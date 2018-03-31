@@ -26,7 +26,10 @@
           time left: <span id="time">10</span> seconds
           <br><br>
           <img src="http://energyandgold.com/wp-content/uploads/2018/01/Crypto-Market-Crash-365x365.jpg" id="memeImg" width="365"></img>
-          <br><button id="myButton" type="button">React</button>
+          <br>
+          <button class="myButton" id="myButton1" type="button">Hello</button>
+          <button class="myButton" id="myButton2" type="button">OK</button>
+          <button class="myButton" id="myButton3" type="button">React</button>
             <script type="text/javascript">
                 var images = ['http://i1.kym-cdn.com/photos/images/newsfeed/000/250/007/672.jpg',
                 'http://i0.kym-cdn.com/photos/images/facebook/001/217/729/f9a.jpg',
@@ -40,7 +43,7 @@
                 }
 
                 // event handler
-                document.getElementById('myButton').addEventListener('click', function() {
+                $('.myButton').click(function(){
                     document.getElementById('memeImg').src = images[i >= images.length - 1 ? i = 0 : ++i];
                 }, false);
             </script>
