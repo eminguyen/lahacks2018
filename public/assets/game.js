@@ -22,13 +22,12 @@ $(document).ready(function(){
     function newMeme() {
         clearInterval(counter);
         startTimer();
-
     }
 
     var images = ['http://i1.kym-cdn.com/photos/images/newsfeed/000/250/007/672.jpg',
     'http://i0.kym-cdn.com/photos/images/facebook/001/217/729/f9a.jpg',
     'https://www.askideas.com/media/41/All-These-Flavors-And-You-Choose-To-Be-Salty-Funny-Girl-Meme-Picture.jpg'],
-        i = 1;
+    i = 1;
 
     // preload
     for (var j=images.length; j--;) {
@@ -42,5 +41,9 @@ $(document).ready(function(){
         newMeme();
     });
 
-
+    // socket io
+    var socket = io('http://localhost:3001');
+    socket.on('start meme game', function() {
+        confirm('Ready?');
+    })
 })
