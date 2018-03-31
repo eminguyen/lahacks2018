@@ -72,10 +72,31 @@ server.listen(3001, function() {
     console.log('hello server');
 })
 
+function printUsers() {
+    console.log('Number of users: ' + users.length);
+    console.log(users);
+}
+
 io.on('connection', function(socket) {
     socket.join('meme game', function() {
         var rooms = Object.keys(socket.rooms);
         users.push(rooms);
-        console.log(users);
+        printUsers();
+        if (users.length === 2) {
+            score = {
+                total : 0
+            }
+            io.emit('start meme game', 'everyone');
+        }
+    })
+
+    socket.on('disconnect', function() {
+        var i = users.indexOf(socket);
+        users.splice(i,1);
+        if (users.length === 0) {
+            console.log('All users disconnected!');
+            return;
+        }
+        printUsers();
     })
 })
