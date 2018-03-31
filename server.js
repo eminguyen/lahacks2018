@@ -7,18 +7,35 @@ var app = express();
 var path = require("path");
 
 //add meme scraping
-var scrape = require("./scrape.js");
-var printScrapeList = setInterval(getScrapeList, 3000);
-function getScrapeList() {
-  console.log(scrape.list);
-  clearInterval(printScrapeList);
-}
+//var scrape = require("./scrape.js");
+
+// function getScrapeList() {
+//   return scrape.list;
+// }
+
+// Handlebars
+var exphbs = require("express-handlebars");
+app.engine("handlebars", exphbs({ defaultLayout: "main" }));
+app.set("view engine", "handlebars");
+
 //finds public
 app.use(express.static(path.join(__dirname, "public")));
 
 //landing page?? like an airplane --> serves up html
 app.get('/', function(req, res) {
-    res.sendFile(path.join(__dirname, 'index.html'))
+    var data = [
+      {
+        "meme": "http://i0.kym-cdn.com/photos/images/facebook/001/217/729/f9a.jpg"
+      },
+      {
+        "meme": "http://i0.kym-cdn.com/photos/images/facebook/001/217/729/f9a.jpg"
+      }
+    ]
+    var hbsObject = {
+      data: data
+    };
+    res.render("index", hbsObject);
+    //res.sendFile(path.join(__dirname, 'index.html'))
 })
 
 app.get('/meme', function(req, res) {
