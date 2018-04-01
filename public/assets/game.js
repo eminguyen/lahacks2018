@@ -68,6 +68,10 @@ $(document).ready(function(){
 
     // socket io
     var socket = io('http://localhost:3001');
+    
+    function displayFinal() {
+        document.getElementById('memeImg').src = 'https://i.imgur.com/EN7FZs6.png';
+    }
 
     // event handler
     $('.myButton').click(function(){
@@ -94,8 +98,16 @@ $(document).ready(function(){
             timeLeft: timeLeft
         }
 
-        userAnswers.push(buttonData);
-        console.log(userAnswers);
+        if (userAnswers.length === 5) {
+            console.log('inside disable');
+            displayFinal();
+            $(this).prop("disabled", true);
+            clearInterval(counter);
+        }
+        else {
+            userAnswers.push(buttonData);
+            console.log(userAnswers);
+        }
 
     });
 
