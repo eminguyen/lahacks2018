@@ -111,7 +111,7 @@ function calculateScore(users) {
     {
       var answer1 = users[0].answers[i];
       var answer2 = users[1].answers[i];
-      var time = Math.min(users[0].timeLeft, users[1].timeLeft);
+      var time = Math.min(answer1.timeLeft, answer2.timeLeft);
       console.log(time);
       if(answer1.buttonClicked === answer2.buttonClicked)
       {
