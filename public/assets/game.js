@@ -71,7 +71,7 @@ $(document).ready(function(){
     var button3 = 0;
 
     // socket io
-    var socket = io('http://localhost:3001');
+    var socket = io.connect(window.location.hostname + ':' + window.location.port);
     
     function displayFinal() {
         document.getElementById('memeImg').src = 'https://i.imgur.com/VRwltWR.png';

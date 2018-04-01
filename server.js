@@ -46,7 +46,7 @@ var io = require('socket.io').listen(server);
 var users = [];
 var score;
 
-server.listen(3001, function() {
+server.listen(process.env.PORT || 3001, function() {
     console.log('hello server');
 })
 
