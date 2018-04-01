@@ -1,3 +1,10 @@
+@media (max-width: 378px) {
+  html body
+  {
+    height: 100% !important;
+  }
+}
+
 html body
 {
     font-family: "Comic Sans MS", cursive, sans-serif !important;
@@ -123,7 +130,7 @@ html body
 .results {
     color: rgb(255, 255, 255) !important;
     font-size: 24px;
-
+    margin-top: 45vh;
 }
 
 .modal-body {
