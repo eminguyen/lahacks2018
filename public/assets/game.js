@@ -160,7 +160,7 @@ $(document).ready(function(){
         myNode.appendChild(document.createElement("br")); 
         var nodeEnd = document.createElement('div4');
         nodeEnd.setAttribute("class", "results")
-        nodeEnd.innerHTML = "p.s. if u got less than 50% u need to find new friends lol";
+        nodeEnd.innerHTML = "p.s. if u got less than 50% u might need to find new friends lol";
         myNode.appendChild(nodeEnd);
 
         /*

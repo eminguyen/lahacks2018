@@ -100,7 +100,7 @@ function calculateScore(users) {
       }
     }
     //Takes the average score
-    score = (totalScore / (users[0].answers.length * 100)) * 100;
+    score = Math.round((totalScore / (users[0].answers.length * 100)) * 100);
     console.log("Total score: " + totalScore);
     console.log("Compatibility score: ", score);
 }
