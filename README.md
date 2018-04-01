@@ -23,7 +23,7 @@ What Do You Meme? is a fun and quirky quiz game created to test the compatibilit
 
 ## Overview
 
-The rise of social medai and image sharing sites have led to the development of an "Internet Meme Culture". The impact of these images upon everyday life and conversation have steadily grown. These viral images have provided an outlet for many online to express themselves and promote discussion of a myriad of dfferent topics, ranging from politics to cute animals. Our team wanted to harness the influence of this powerful cultural phenomenon and utilize it to test the compatibility of two individuals on a deeper, and more memeingful scale.
+The rise of social medai and image sharing sites have led to the development of an "Internet Meme Culture". The impact of these images upon everyday life and conversation have steadily grown. These viral images have provided an outlet for many online to express themselves and promote discussion of a myriad of different topics, ranging from politics to cute animals. Our team wanted to harness the influence of this powerful cultural phenomenon and utilize it to test the compatibility of two individuals on a deeper, and more memeingful scale.
 
 We attended LA Hacks having taking inspiration from the likes of Kahoot! and The Test and we wanted to find the compatibility of individuals based on their meme preferences. Our application uses sockets.io to live connect users. When two users are connected to the server at once, they are notified and asked if they are ready. Once both users click on the ready button, the game starts.
 

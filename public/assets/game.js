@@ -50,12 +50,16 @@ $(document).ready(function(){
 
     }
 
-    var images = ['http://i1.kym-cdn.com/photos/images/newsfeed/000/250/007/672.jpg',
-    'http://i0.kym-cdn.com/photos/images/facebook/001/217/729/f9a.jpg',
-    'https://www.askideas.com/media/41/All-These-Flavors-And-You-Choose-To-Be-Salty-Funny-Girl-Meme-Picture.jpg',
-    'https://c1.staticflickr.com/3/2200/32909417816_b3e9de59b0_b.jpg',
-    'https://i.imgur.com/WA7uzXF.jpg',
-    'https://i.imgur.com/cYDnwFv.jpg']
+    var images = ['https://i.imgur.com/GCL80jc.jpg',
+    'https://i.imgur.com/9KwIkwf.jpg',
+    'https://i.imgur.com/TT3YO1V.jpg',
+    'https://i.imgur.com/474V1bi.jpg',
+    'https://i.imgur.com/JXzxQwO.jpg',
+    'https://i.imgur.com/FpTIho5.png',
+    'https://i.imgur.com/nVlwkrS.jpg',
+    'https://i.imgur.com/Ld1waB1.png',
+    'https://i.imgur.com/cG5tjVz.jpg',
+    'https://i.imgur.com/P6Jl2bx.jpg']
 
     // preload
   /*  for (var j=images.length; j--;) {
@@ -98,7 +102,7 @@ $(document).ready(function(){
             timeLeft: timeLeft
         }
 
-        if (userAnswers.length === 5) {
+        if (userAnswers.length === 9) {
             console.log('inside disable');
             displayFinal();
             $(this).prop("disabled", true);
@@ -151,7 +155,7 @@ $(document).ready(function(){
 
         var nodeResults = document.createElement('div4');
         nodeResults.innerHTML = "u guys are " + finalScore + "% compatible! amazing! :) " + 
-            "p.s. if u got less than 50% u need to make new friends lol";
+            "p.s. if u got less than 50% u need to find new friends lol";
         myNode.appendChild(nodeResults);
 
         /*

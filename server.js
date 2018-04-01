@@ -25,38 +25,15 @@ app.use(express.static(path.join(__dirname, "public")));
 app.get('/', function(req, res) {
     var data = [
       {
-        "meme": "http://energyandgold.com/wp-content/uploads/2018/01/Crypto-Market-Crash-365x365.jpg", "name": "sprinkle"
-      },
-      {
-        "meme": "http://energyandgold.com/wp-content/uploads/2018/01/Crypto-Market-Crash-365x365.jpg", "name": "sprinkle"
-      },
-      {
-        "meme": "http://energyandgold.com/wp-content/uploads/2018/01/Crypto-Market-Crash-365x365.jpg", "name": "barf"
-      },
-      {
-        "meme": "http://energyandgold.com/wp-content/uploads/2018/01/Crypto-Market-Crash-365x365.jpg", "name": "luv"
-      },
-      {
-        "meme": "http://energyandgold.com/wp-content/uploads/2018/01/Crypto-Market-Crash-365x365.jpg", "name": "random"
-      },
-      {
-        "meme": "http://energyandgold.com/wp-content/uploads/2018/01/Crypto-Market-Crash-365x365.jpg", "name": "barf"
-      },
-      {
-        "meme": "http://energyandgold.com/wp-content/uploads/2018/01/Crypto-Market-Crash-365x365.jpg", "name": "luv"
-      },
-      {
-        "meme": "http://energyandgold.com/wp-content/uploads/2018/01/Crypto-Market-Crash-365x365.jpg", "name": "barf"
-      },
-      {
-        "meme": "http://energyandgold.com/wp-content/uploads/2018/01/Crypto-Market-Crash-365x365.jpg", "name": "random"
-      },
+        "meme": "https://i.imgur.com/xpodiVW.png", "name": "sprinkle"
+      }
     ]
     var hbsObject = {
       data: data
     };
     res.render("index", hbsObject);
     //res.sendFile(path.join(__dirname, 'index.html'))
+    
 })
 
 app.get('/meme', function(req, res) {
@@ -197,7 +174,6 @@ io.on('connection', function(socket) {
             calculateScore(users);
             io.sockets.emit('score', score);
         }
-
 
         console.log('index of user:', index);
     });
