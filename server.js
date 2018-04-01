@@ -25,7 +25,7 @@ app.use(express.static(path.join(__dirname, "public")));
 app.get('/', function(req, res) {
     var data = [
       {
-        "meme": "https://i.imgur.com/xpodiVW.png", "name": "sprinkle"
+        "meme": "https://i.imgur.com/RUrykEc.png", "name": "sprinkle"
       }
     ]
     var hbsObject = {

@@ -8,10 +8,6 @@ html body
     color: white;
 }
 
-html p
-{
-    filter : drop-shadow(0px 0px 5px rgba(0,0,0,0.5));
-}
 
 .gallery img {
   margin-bottom: 30px;
@@ -23,8 +19,6 @@ html p
     text-align: center;
     font-weight: 500;
     margin-top: 50px;
-    filter : drop-shadow(0px 0px 3px rgba(30,144,255,0.7))
-    drop-shadow(0px 0px 10px rgba(0,0,0,0.3));
 }
 
 .gallery-title:after {
@@ -124,4 +118,23 @@ html p
   border-radius: 0px;
   padding: 0px;
   margin: 0px;
+}
+
+.results {
+    color: rgb(255, 255, 255) !important;
+    font-size: 24px;
+
+}
+
+.modal-body {
+    color: rgb(92, 89, 98);
+    filter: none !important;
+    font-size: 28px;
+}
+
+.modal-title {
+    font-size: 22px !important;
+    text-align: center;
+    margin: auto;
+    width: 100%;
 }
