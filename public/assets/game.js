@@ -74,7 +74,7 @@ $(document).ready(function(){
     var socket = io('http://localhost:3001');
     
     function displayFinal() {
-        document.getElementById('memeImg').src = 'https://i.imgur.com/EN7FZs6.png';
+        document.getElementById('memeImg').src = 'https://i.imgur.com/VRwltWR.png';
     }
 
     // event handler
@@ -154,9 +154,14 @@ $(document).ready(function(){
         myNode.innerHTML='';
 
         var nodeResults = document.createElement('div4');
-        nodeResults.innerHTML = "u guys are " + finalScore + "% compatible! amazing! :) " + 
-            "p.s. if u got less than 50% u need to find new friends lol";
+        nodeResults.setAttribute("class", "results")
+        nodeResults.innerHTML = "u guys are " + finalScore + "% compatible! amazing! :) ";
         myNode.appendChild(nodeResults);
+        myNode.appendChild(document.createElement("br")); 
+        var nodeEnd = document.createElement('div4');
+        nodeEnd.setAttribute("class", "results")
+        nodeEnd.innerHTML = "p.s. if u got less than 50% u need to find new friends lol";
+        myNode.appendChild(nodeEnd);
 
         /*
         var newNode = document.createElement('div');
