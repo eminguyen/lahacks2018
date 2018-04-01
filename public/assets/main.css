@@ -1,11 +1,22 @@
+html body {
+    font-family: "Comic Sans MS", cursive, sans-serif !important;
+    height: 100vh;
+    background: #BE93C5;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top, #7BC6CC, #BE93C5);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top, #7BC6CC, #BE93C5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    color: white;
+}
+
+.gallery img {
+  margin-bottom: 30px;
+}
 
 .gallery-title
 {
     font-size: 36px;
-    color: #42B32F;
     text-align: center;
     font-weight: 500;
-    margin-bottom: 70px;
+    margin-top: 50px;
 }
 .gallery-title:after {
     content: "";
@@ -15,38 +26,49 @@
     height: 45px;
     border-bottom: 1px solid #5e5e5e;
 }
+
 .filter-button
 {
-    font-size: 18px;
-    border: 1px solid #42B32F;
+    font-size: 20px;
+    border: 1px solid #BE93C5;
     border-radius: 5px;
     text-align: center;
-    color: #42B32F;
+    color: #BE93C5;
     margin-bottom: 30px;
-
+    filter : drop-shadow(0px 0px 5px rgba(0,0,0,0.5));
 }
+
 .filter-button:hover
 {
     font-size: 18px;
-    border: 1px solid #42B32F;
+    border: 1px solid #BE93C5;
     border-radius: 5px;
     text-align: center;
     color: #ffffff;
-    background-color: #42B32F;
-
+    background-color: #BE93C5;
 }
+
 .btn-default:active .filter-button:active
 {
-    background-color: #42B32F;
+    background-color: #BE93C5;
     color: white;
 }
 
-.port-image
+.myButton
 {
-    width: 100%;
+    width: 100px;
+    margin: 0px 5px;
 }
 
 .gallery_product
 {
     margin-bottom: 30px;
+}
+
+.gallery img
+{
+    max-height: 365px;
+    max-width: 365px;
+    border-radius: 10px;
+    filter : drop-shadow(0px 0px 5px rgba(0,0,0,0.5));
 }
