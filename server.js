@@ -67,6 +67,7 @@ app.get('/meme', function(req, res) {
 var server = require('http').createServer(app);
 var io = require('socket.io').listen(server);
 var users = [];
+var score;
 
 server.listen(3001, function() {
     console.log('hello server');
@@ -122,7 +123,7 @@ function calculateScore(users) {
       }
     }
     //Takes the average score
-    var score = totalScore / (users[0].answers.length * 100);
+    score = (totalScore / (users[0].answers.length * 100)) * 100;
     console.log("Total score: " + totalScore);
     console.log("Compatibility score: ", score);
 }
