@@ -1,10 +1,10 @@
 # What Do You Meme?
 
-<p align="center"> A cooperative meme based game created for LA Hacks 2018 </p>
+<p align="center"> A Meme-based Compatibility Quiz Game created for LA Hacks 2018 </p>
 
 ![wdym](https://user-images.githubusercontent.com/32719891/38170453-d99a505a-353a-11e8-856c-cc0ae7a35676.png)
 
-What Do You Meme? is a game created to promote friendships through the power of internet meme culture. The game pairs up two players and asks them to react with one three options: ?, Haha, and Yikes. It then uses a carefully thought out algorithm to determine the compatibility between the two players.
+What Do You Meme? is a fun and quirky quiz game created to test the compatibility of two individuals through the power of internet meme culture. The game prompts the two players to react to each image with one ofthree options: ?, Haha, and Yikes. It then uses a precise and holistic algorithm to determine the meme compatibility between the two players.
 
 ## Table of Contents
 - [Team Members](https://github.com/gits-lit/lahacks2018#team-members)
@@ -23,11 +23,11 @@ What Do You Meme? is a game created to promote friendships through the power of 
 
 ## Overview
 
-In the world of social media and the Internet of Things, it is hard to not be exposed to meme culture and how it has impacted our daily lives and our ways of thinking. Memes have been utilized to market popular consumer products and spread opinions on important global events. Our group had a meme dream and we had the memes and the means to do it. We wanted to harness the influence of this powerful cultural phenomenon and utilize it to connect individuals on a deeper, more memeingful basis.
+The rise of social medai and image sharing sites have led to the development of an "Internet Meme Culture". The impact of these images upon everyday life and conversation have steadily grown. These viral images have provided an outlet for many online to express themselves and promote discussion of a myriad of dfferent topics, ranging from politics to cute animals. Our team wanted to harness the influence of this powerful cultural phenomenon and utilize it to test the compatibility of two individuals on a deeper, and more memeingful scale.
 
-We attended LA Hacks having taking inspiration from the likes of Kahoot! and The Test and we wanted to match individuals based on their meme preferences. Our application uses sockets.io to live connect users. When two users are connected to the server at once, they are notified and asked if they are ready. Once both users click on the ready button, the game starts.
+We attended LA Hacks having taking inspiration from the likes of Kahoot! and The Test and we wanted to find the compatibility of individuals based on their meme preferences. Our application uses sockets.io to live connect users. When two users are connected to the server at once, they are notified and asked if they are ready. Once both users click on the ready button, the game starts.
 
-The game displays various memes and asks users to rate them using our reaction system. Users are given a time limit of 10 seconds to rate a meme before the next one is displayed. Our matching algorithm prioritizes couples who are able to rate memes quicker while also maintaining similiarity. This is a sign that the users are naturally similar people. There is also a hidden time delay to ensure that the users actually take time to read the meme and that they do not cheat.
+The game displays various memes and asks users to rate them using our reaction system. Users are given a time limit of 10 seconds to rate a meme before the next one is displayed. Our matching algorithm takes into account the amount of time for the user to react as well as the similarity of responses between the two users. Our algorithm will then produce a percentage; the higher this percentage is, the more meme compatible the two users are. We also have included preventative measures in our compatibility algorithm to ensure that the users actually take time to read and react to the meme and that they do not cheat.
 
 ## Installation
 
