@@ -92,11 +92,45 @@ function checkStart(users) {
 function calculateScore(users) {
     printUsers();
     console.log('game over');
+    var points = [
+      {correct: 0, incorrect: 0},
+      {correct: 5, incorrect: 5},
+      {correct: 10, incorrect: 10},
+      {correct: 15, incorrect: 15},
+      {correct: 20, incorrect: 20},
+      {correct: 25, incorrect: 25},
+      {correct: 50, incorrect: 30},
+      {correct: 75, incorrect: 40},
+      {correct: 85, incorrect: 50},
+      {correct: 100, incorrect: 0},
+      {correct: 100, incorrect: 0}
+    ];
+    var totalScore = 0;
+    var i;
+    for(i = 0; i < users[0].answers.length; i++ )
+    {
+      var answer1 = users[0].answers[i];
+      var answer2 = users[1].answers[i];
+      var time = Math.min(users[0].timeLeft, users[1].timeLeft);
+      if(answer1.buttonClicked === answer2.buttonClicked)
+      {
+          totalScore += points[time].correct;
+      }
+      else
+      {
+          totalScore += points[time].incorrect;
+      }
+    }
+    //Takes the average score
+    var score = totalScore / (users[0].answers.length * 100);
+    console.log(totalScore);
+    console.log(score);
 }
 
 function checkFinished(users) {
     for (var i = 0; i < users.length; i++) {
         if (users[i].answers === null) {
+            console.log("users answers are null");
             return false;
         }
     }
@@ -159,9 +193,9 @@ io.on('connection', function(socket) {
         }).indexOf(data[0].userId);
         users[index].answers = data;
         if (checkFinished(users)) {
-            calculateScore();
+            calculateScore(users);
         }
-        
+
 
         console.log('index of user:', index);
     });
