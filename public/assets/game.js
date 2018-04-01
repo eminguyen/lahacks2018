@@ -4,7 +4,7 @@ $(document).ready(function(){
     var counter;
     var timer;
     var userAnswers = [];
-    
+
     var i = -1;
     function startTimer() {
         timer = 10;
@@ -39,20 +39,20 @@ $(document).ready(function(){
         if(i===images.length-1){
             var myNode = document.getElementById('outerDiv');
             myNode.innerHTML='';
-  
+
             var newNode = document.createElement('div');
-            newNode.innerHTML = "button1 clicked " + button1 + " times.";
+            newNode.innerHTML = "? clicked " + button1 + " times.";
             myNode.appendChild(newNode);
-  
+
             var newNode2 = document.createElement('div2');
-            newNode2.innerHTML = "button2 clicked " + button2 + " times.";
+            newNode2.innerHTML = "haha clicked " + button2 + " times.";
             myNode.appendChild(newNode2);
             myNode.appendChild(document.createElement("br"));
-  
+
             var newNode3 = document.createElement('div3');
-            newNode3.innerHTML = "button3 clicked " + button3 + " times.";
+            newNode3.innerHTML = "yikes clicked " + button3 + " times.";
             myNode.appendChild(newNode3);
-  
+
             myNode.setAttribute("align","center");
             button1 = 0;
             button2 = 0;
@@ -80,10 +80,10 @@ $(document).ready(function(){
     var button1 = 0;
     var button2 = 0;
     var button3 = 0;
-    
+
     // socket io
     var socket = io('http://localhost:3001');
-    
+
     // event handler
     $('.myButton').click(function(){
         var buttonclicked = this.id;
@@ -114,6 +114,13 @@ $(document).ready(function(){
 
     });
 
+/*
+    $('.button1').click(function(){
+      document.getElementById("reactionimg").src = "test/test.jpg"
+      document.getElementById("reactionimg").setAttribute("style", "z-index: 1;")
+      setTimeout(function(){  document.getElementById("reactionimg").setAttribute("style", "z-index: 0;")} ,1000);
+    });
+*/
     socket.on('check meme game', function(data) {
         console.log(data);
         var index = data.map(function(user) {

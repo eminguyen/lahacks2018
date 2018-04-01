@@ -107,3 +107,21 @@ html p
     max-width: 365px;
     border-radius: 10px;
 }
+/*
+#reactionimg {
+    float: right;
+    position: absolute !important;
+    z-index: 0;
+    margin-top: 300px;
+    margin-left: calc(50vw - 50px);;
+    height: 100px;
+    width: 100px;
+    color: transparent;
+}*/
+
+#reactionimg {
+  height: 100px;
+  border-radius: 0px;
+  padding: 0px;
+  margin: 0px;
+}
