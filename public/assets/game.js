@@ -17,6 +17,12 @@ $(document).ready(function(){
                 $("#time").text(timer)
             }
             else {
+                var buttonData = {
+                    userId: socket.id,
+                    buttonClicked: 'none',
+                    timeLeft: 0
+                }
+                userAnswers.push(buttonData);
                 newMeme();
                 return;
             }
