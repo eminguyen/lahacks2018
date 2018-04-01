@@ -64,6 +64,7 @@ $(document).ready(function(){
     })
 
     socket.on('start meme game', function() {
-        alert('game started!');
+        newMeme();
+        $('#gameStartModal').modal('show')
     })
 })
