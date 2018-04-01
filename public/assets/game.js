@@ -3,6 +3,8 @@ $(document).ready(function(){
     //This method starts the timer
     var counter;
     var timer;
+    var finalScore;
+    var myNode;
     var userAnswers = [];
 
     var i = -1;
@@ -37,23 +39,6 @@ $(document).ready(function(){
     function newMeme() {
         document.getElementById('memeImg').src = images[i >= images.length - 1 ? i = 0 : ++i];
         if(i===images.length-1){
-            var myNode = document.getElementById('outerDiv');
-            myNode.innerHTML='';
-
-            var newNode = document.createElement('div');
-            newNode.innerHTML = "? clicked " + button1 + " times.";
-            myNode.appendChild(newNode);
-
-            var newNode2 = document.createElement('div2');
-            newNode2.innerHTML = "haha clicked " + button2 + " times.";
-            myNode.appendChild(newNode2);
-            myNode.appendChild(document.createElement("br"));
-
-            var newNode3 = document.createElement('div3');
-            newNode3.innerHTML = "yikes clicked " + button3 + " times.";
-            myNode.appendChild(newNode3);
-
-            myNode.setAttribute("align","center");
             button1 = 0;
             button2 = 0;
             button3 = 0;
@@ -144,5 +129,35 @@ $(document).ready(function(){
     socket.on('start meme game', function() {
         startTimer();
         $('#gameStartModal').modal('show')
+    })
+
+    socket.on('score', function(data) {
+        finalScore = data;
+
+        myNode = document.getElementById('outerDiv');
+        myNode.innerHTML='';
+
+        var nodeResults = document.createElement('div4');
+        nodeResults.innerHTML = "u guys are " + finalScore + "% compatible! amazing! :) " + 
+            "p.s. if u got less than 50% u need to make new friends lol";
+        myNode.appendChild(nodeResults);
+
+        /*
+        var newNode = document.createElement('div');
+        newNode.innerHTML = "? clicked " + button1 + " times.";
+        myNode.appendChild(newNode);
+
+        var newNode2 = document.createElement('div2');
+        newNode2.innerHTML = "haha clicked " + button2 + " times.";
+        myNode.appendChild(newNode2);
+        myNode.appendChild(document.createElement("br"));
+
+        var newNode3 = document.createElement('div3');
+        newNode3.innerHTML = "yikes clicked " + button3 + " times.";
+        myNode.appendChild(newNode3);
+        myNode.appendChild(document.createElement("br"));
+        */
+        myNode.setAttribute("align","center");
+            
     })
 })

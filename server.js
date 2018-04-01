@@ -194,6 +194,7 @@ io.on('connection', function(socket) {
         users[index].answers = data;
         if (checkFinished(users)) {
             calculateScore(users);
+            io.sockets.emit('score', score);
         }
 
 
