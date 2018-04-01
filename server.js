@@ -77,22 +77,57 @@ function printUsers() {
     console.log(users);
 }
 
+function checkStart(users) {
+    for (var i = 0; i < users.length; i++) {
+        if (!users[i].response) {
+            return false;
+        }
+    }
+    if (users.length === 2) {
+        return true;
+    }
+    return false;
+}
+
 io.on('connection', function(socket) {
+    function startGame() {
+        io.emit('start meme game', 'everyone');
+    }
     socket.join('meme game', function() {
-        var rooms = Object.keys(socket.rooms);
-        users.push(rooms);
+        users.push({
+            userId: socket.id,
+            room: 'meme game',
+            response: false
+        });
         printUsers();
         if (users.length === 2) {
             score = {
                 total : 0
             }
-            io.emit('start meme game', 'everyone');
+            io.sockets.emit('check meme game', users);
         }
     })
 
+    socket.on('ready response', function(data) {
+        console.log(data);
+        var index = users.map(function(user) {
+            return user.userId;
+        }).indexOf(data.userId);
+        console.log('index of user:', index);
+        users[index].response = data.response;
+        var check = checkStart(users);
+        if (check) {
+            startGame();
+        }
+        printUsers();
+    })
+
     socket.on('disconnect', function() {
-        var i = users.indexOf(socket);
-        users.splice(i,1);
+        var index = users.map(function(user) {
+            return user.userId;
+        }).indexOf(socket.id);
+        console.log("User disconnected:", socket.id);
+        users.splice(index,1);
         if (users.length === 0) {
             console.log('All users disconnected!');
             return;

@@ -84,7 +84,27 @@ $(document).ready(function(){
 
     // socket io
     var socket = io('http://localhost:3001');
+    socket.on('check meme game', function(data) {
+        console.log(data);
+        var index = data.map(function(user) {
+            return user.userId;
+        }).indexOf(socket.id);
+        console.log(index);
+        var userState = {
+            userId: data[index].userId,
+            response: data[index].response
+        };
+        if(!data[index].response) {
+            var response = confirm('Ready?');
+            userState= {
+                userId: socket.id,
+                response: response
+            }
+        }
+        socket.emit('ready response', userState);
+    })
+
     socket.on('start meme game', function() {
-        confirm('Ready?');
+        alert('game started!');
     })
 })
