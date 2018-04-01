@@ -112,7 +112,6 @@ function calculateScore(users) {
       var answer1 = users[0].answers[i];
       var answer2 = users[1].answers[i];
       var time = Math.min(answer1.timeLeft, answer2.timeLeft);
-      console.log(time);
       if(answer1.buttonClicked === answer2.buttonClicked)
       {
           totalScore += points[time].correct;
@@ -124,8 +123,8 @@ function calculateScore(users) {
     }
     //Takes the average score
     var score = totalScore / (users[0].answers.length * 100);
-    console.log(totalScore);
-    console.log(score);
+    console.log("Total score: " + totalScore);
+    console.log("Compatibility score: "score);
 }
 
 function checkFinished(users) {
