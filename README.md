@@ -1,6 +1,6 @@
 # What Do You Meme?
 
-<p align="center"> A Meme-based Compatibility Quiz Game created for LA Hacks 2018 </p>
+<p align="center"> A meme-based social experience created for LA Hacks 2018 </p>
 
 ![wdym](https://user-images.githubusercontent.com/32719891/38175696-8582bba0-3595-11e8-9867-e3d0977ea833.png)
 
@@ -8,10 +8,10 @@ What Do You Meme? is a fun and quirky quiz game created to test the compatibilit
 
 ## Table of Contents
 - [Team Members](https://github.com/gits-lit/lahacks2018#team-members)
-- [Purpose and Idea](https://github.com/gits-lit/lahacks2018#overview)
-- [Parts](https://github.com/gits-lit/lahacks2018#installation)
+- [Overview](https://github.com/gits-lit/lahacks2018#overview)
+- [Installation](https://github.com/gits-lit/lahacks2018#installation)
 - [Demonstration](https://github.com/gits-lit/lahacks2018#demonstration)
-- [Additional Credit](https://github.com/gits-lit/lahacks2018#thanks)
+- [Thanks](https://github.com/gits-lit/lahacks2018#thanks)
 - [License](https://github.com/gits-lit/lahacks2018#license)
 
 ## Team Members
