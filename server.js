@@ -89,6 +89,23 @@ function checkStart(users) {
     return false;
 }
 
+function calculateScore(users) {
+    printUsers();
+    console.log('game over');
+}
+
+function checkFinished(users) {
+    for (var i = 0; i < users.length; i++) {
+        if (users[i].answers === null) {
+            return false;
+        }
+    }
+    if (users.length === 2) {
+        return true;
+    }
+    return false;
+}
+
 io.on('connection', function(socket) {
     function startGame() {
         io.emit('start meme game', 'everyone');
@@ -134,4 +151,18 @@ io.on('connection', function(socket) {
         }
         printUsers();
     })
+
+    socket.on('send button data', function(data) {
+        console.log(data);
+        var index = users.map(function(user) {
+            return user.userId;
+        }).indexOf(data[0].userId);
+        users[index].answers = data;
+        if (checkFinished(users)) {
+            calculateScore();
+        }
+        
+
+        console.log('index of user:', index);
+    });
 })

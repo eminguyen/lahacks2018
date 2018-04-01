@@ -51,6 +51,7 @@ $(document).ready(function(){
             button1 = 0;
             button2 = 0;
             button3 = 0;
+            socket.emit('send button data', userAnswers);
             return;
           }
         clearInterval(counter);
@@ -104,7 +105,7 @@ $(document).ready(function(){
 
         userAnswers.push(buttonData);
         console.log(userAnswers);
-        socket.emit('send button data', userAnswers);
+
     });
 
     socket.on('check meme game', function(data) {
