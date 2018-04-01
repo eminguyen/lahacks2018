@@ -28,7 +28,8 @@ $(document).ready(function(){
     'http://i0.kym-cdn.com/photos/images/facebook/001/217/729/f9a.jpg',
     'https://www.askideas.com/media/41/All-These-Flavors-And-You-Choose-To-Be-Salty-Funny-Girl-Meme-Picture.jpg',
     'https://c1.staticflickr.com/3/2200/32909417816_b3e9de59b0_b.jpg',
-    'https://i.imgur.com/WA7uzXF.jpg'],
+    'https://i.imgur.com/WA7uzXF.jpg',
+    'https://i.imgur.com/cYDnwFv.jpg'],
     i = -1;
 
     // preload
