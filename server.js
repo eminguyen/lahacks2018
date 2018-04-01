@@ -112,6 +112,7 @@ function calculateScore(users) {
       var answer1 = users[0].answers[i];
       var answer2 = users[1].answers[i];
       var time = Math.min(users[0].timeLeft, users[1].timeLeft);
+      console.log(time);
       if(answer1.buttonClicked === answer2.buttonClicked)
       {
           totalScore += points[time].correct;
@@ -129,7 +130,7 @@ function calculateScore(users) {
 
 function checkFinished(users) {
     for (var i = 0; i < users.length; i++) {
-        if (users[i].answers === null) {
+        if (users[i].answers === undefined) {
             console.log("users answers are null");
             return false;
         }
