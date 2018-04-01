@@ -2,7 +2,7 @@
 
 <p align="center"> A Meme-based Compatibility Quiz Game created for LA Hacks 2018 </p>
 
-![wdym](https://user-images.githubusercontent.com/32719891/38170453-d99a505a-353a-11e8-856c-cc0ae7a35676.png)
+![wdym](https://user-images.githubusercontent.com/32719891/38175696-8582bba0-3595-11e8-9867-e3d0977ea833.png)
 
 What Do You Meme? is a fun and quirky quiz game created to test the compatibility of two individuals through the power of internet meme culture. The game prompts the two players to react to each image with one ofthree options: ?, Haha, and Yikes. It then uses a precise and holistic algorithm to determine the meme compatibility between the two players.
 
@@ -11,7 +11,7 @@ What Do You Meme? is a fun and quirky quiz game created to test the compatibilit
 - [Purpose and Idea](https://github.com/gits-lit/lahacks2018#overview)
 - [Parts](https://github.com/gits-lit/lahacks2018#installation)
 - [Demonstration](https://github.com/gits-lit/lahacks2018#demonstration)
-- [Additional Credit](https://github.com/gits-lit/lahacks2018#additional-credit)
+- [Additional Credit](https://github.com/gits-lit/lahacks2018#thanks)
 - [License](https://github.com/gits-lit/lahacks2018#license)
 
 ## Team Members
@@ -46,12 +46,12 @@ The game displays various memes and asks users to rate them using our reaction s
 
 ## Demonstration
 
-Our application will be hosted on Heroku soon. 
+![whatdoyoumeme](https://user-images.githubusercontent.com/32719891/38175691-5b9e4ce6-3595-11e8-8467-74eb033b9b4c.gif)
 
-A gif will also be available soon.
+https://what-do-you-meme.herokuapp.com
 
-## Additional Credit
-- [LA Hacks](https://lahacks.com/)
+## Thanks
+- [LA Hacks for hosting the hackathon](https://lahacks.com/)
 
 ## License
 Copyright 2018 Gretal Dea Rick Huynh Antony Nguyen Clark Phan Linda Yang
