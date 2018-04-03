@@ -7,12 +7,12 @@
 What Do You Meme? is a fun and quirky quiz game created to test the compatibility of two individuals through the power of internet meme culture. The game prompts the two players to react to each image with one ofthree options: ?, Haha, and Yikes. It then uses a precise and holistic algorithm to determine the meme compatibility between the two players.
 
 ## Table of Contents
-- [Team Members](https://github.com/gits-lit/lahacks2018#team-members)
-- [Overview](https://github.com/gits-lit/lahacks2018#overview)
-- [Installation](https://github.com/gits-lit/lahacks2018#installation)
-- [Demonstration](https://github.com/gits-lit/lahacks2018#demonstration)
-- [Thanks](https://github.com/gits-lit/lahacks2018#thanks)
-- [License](https://github.com/gits-lit/lahacks2018#license)
+- [Team Members](https://github.com/eminguyen/wdymeme#team-members)
+- [Overview](https://github.com/eminguyen/wdymeme#overview)
+- [Installation](https://github.com/eminguyen/wdymeme#installation)
+- [Demonstration](https://github.com/eminguyen/wdymeme#demonstration)
+- [Thanks](https://github.com/eminguyen/wdymeme#thanks)
+- [License](https://github.com/eminguyen/wdymeme#license)
 
 ## Team Members
 - [Gretal Dea](https://github.com/grtld)
